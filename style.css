@@ -9,11 +9,18 @@
     display: none;
 }
 
+html {
+    scrollbar-width: none;
+}
+
 body {
     background-color: rgba(0, 0, 0, 0.89);
+    -ms-overflow-style: none;
+    overflow: hidden;
 }
 
 .container {
+    overflow: auto;
     height: 100vh;
     width: 100%;
 }
@@ -118,6 +125,56 @@ header .li2 {
     }
 }
 
+.loading-page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to right, #17191a, #4a4e50, #030303);
+    height: 105%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#svg {
+    height: 150px;
+    width: 150px;
+    stroke: rgb(255, 255, 255);
+    fill-opacity: 0;
+    stroke-width: 3px;
+    stroke-dasharray: 4500;
+    animation: draw 8s ease;
+}
+
+@keyframes draw {
+    0% {
+        stroke-dashoffset: 4500;
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+.name-container {
+    margin-top: 30px;
+    height: 30px;
+    overflow: hidden;
+}
+
+.logo-name {
+    color: #fff;
+    font-size: 20px;
+    letter-spacing: 12px;
+    text-transform: uppercase;
+    margin-left: 20px;
+    font-weight: bolder;
+}
+
 @media (max-width:940px) {
     .main {
         display: block;
@@ -135,7 +192,7 @@ header .li2 {
         width: 100%;
     }
 
-    .ab2 {   
+    .ab2 {
         display: block;
     }
 
@@ -161,9 +218,10 @@ header .li2 {
 
 @media (max-width: 568px) {
 
-    .image img {  
-        max-width: 350px;    
+    .image img {
+        max-width: 350px;
     }
+
     .aboutMe {
         margin-top: 30%;
     }
@@ -176,28 +234,41 @@ header .li2 {
         margin-left: 30px;
     }
 
-   
+
 
 }
+
 @media (max-width: 468px) {
-    .image img {  
-        max-width: 270px;    
+    .image img {
+        max-width: 270px;
     }
-    .aboutMe  {
+
+    .aboutMe {
         margin-top: 30%;
     }
-   
-    .aboutMe h1{
+
+    .aboutMe h1 {
         font-size: large;
+    }
+
+    .logo-name {
+        font-size: 15px;
+        letter-spacing: 10px;
     }
 }
 
 @media (max-width: 368px) {
 
-    .image img {  
-        max-width: 220px;    
+    .image img {
+        max-width: 220px;
     }
+
     .aboutMe {
         margin-top: 30%;
+    }
+
+    .logo-name {
+        font-size: 10px;
+        letter-spacing: 8px;
     }
 }
