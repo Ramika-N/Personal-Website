@@ -47,7 +47,9 @@ header ul a {
     color: aliceblue;
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s ease
+    transition: color 0.3s ease;
+    -webkit-tap-highlight-color: transparent;
+
 }
 
 header a:hover {
@@ -83,7 +85,7 @@ header .li2 {
 
 .aboutMe h1 {
     color: azure;
-    margin-top: -80px;
+    margin-top: -60px;
 }
 
 .aboutMe p {
@@ -175,6 +177,32 @@ header .li2 {
     font-weight: bolder;
 }
 
+.btn-1 {
+    margin-top: 50px;
+    color: #0bc9c9;
+    background-color: transparent;
+    height: 2.5rem;
+    width: 300px;
+    font-weight: 600;
+    padding: 10px 10px;
+    letter-spacing: 8px;
+    border: 0.1rem solid #158d8d;
+    transition: 0.6s linear;
+}
+
+.btn-1:hover {
+    margin-left: 5%;
+    scale: 1.2;
+    color: black;
+    background-color: #158d8d;
+    filter: drop-shadow(0 0 10px #0bc9c9);
+}
+
+.aboutout {
+    display: none;
+
+}
+
 @media (max-width:940px) {
     .main {
         display: block;
@@ -198,6 +226,11 @@ header .li2 {
 
     .ab1 {
         display: none;
+    }
+
+    .btn-1:hover {
+        margin-left: 0;
+        scale: 1.2;
     }
 }
 
@@ -234,7 +267,10 @@ header .li2 {
         margin-left: 30px;
     }
 
-
+    .btn-1 {
+        width: 200px;
+        letter-spacing: 6px;
+    }
 
 }
 
@@ -254,6 +290,12 @@ header .li2 {
     .logo-name {
         font-size: 15px;
         letter-spacing: 10px;
+    }
+
+    .btn-1 {
+        width: 150px;
+        padding: 8px 8px;
+        letter-spacing: 4px;
     }
 }
 
